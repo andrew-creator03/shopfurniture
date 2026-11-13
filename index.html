@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORM / OBJECTS — Objects for Living</title>
+<meta name="description" content="FORM / OBJECTS — furniture designed as architecture for everyday life.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#/" class="nav-logo">FORM <span>/</span> OBJECTS</a>
+  <ul class="nav-links">
+    <li><a href="#/collection" data-nav="collection">COLLECTION</a></li>
+    <li><a href="#/collection" data-nav="objects">OBJECTS</a></li>
+    <li><a href="#/stories" data-nav="stories">STORIES</a></li>
+    <li><a href="#/studio" data-nav="studio">STUDIO</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-btn" id="searchBtn">SEARCH</button>
+    <button class="nav-btn nav-cart" id="cartBtn">BAG <span class="cart-count" id="cartCount">(0)</span></button>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">×</button>
+  <ul class="mobile-links">
+    <li><a href="#/collection">COLLECTION</a></li>
+    <li><a href="#/collection">OBJECTS</a></li>
+    <li><a href="#/stories">STORIES</a></li>
+    <li><a href="#/studio">STUDIO</a></li>
+    <li><a href="#/" id="mobileSearch">SEARCH</a></li>
+  </ul>
+</div>
+
+<!-- MAIN VIEW -->
+<main id="app"></main>
+
+<!-- FOOTER (injected by JS) -->
+<footer class="footer" id="footer"></footer>
+
+<!-- CART DRAWER -->
+<div class="cart-backdrop" id="cartBackdrop"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+  <div class="cart-head">
+    <span class="cart-title">YOUR BAG</span>
+    <button class="cart-close" id="cartClose">×</button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-foot" id="cartFoot"></div>
+</aside>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay" aria-hidden="true">
+  <button class="search-close" id="searchClose">×</button>
+  <div class="search-inner">
+    <input type="text" class="search-input" id="searchInput" placeholder="SEARCH OBJECTS…" autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
